@@ -1,7 +1,7 @@
 services:
-  chal_1:
+  instance_1:
     build:
       context: .
+    hostname: codingpirates_1
     ports:
-      - '2201:22'
-    hostname: chal_1
+    - '2201:22'
