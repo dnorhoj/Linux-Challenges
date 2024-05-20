@@ -1,0 +1,7 @@
+services:
+  chal_1:
+    build:
+      context: .
+    ports:
+      - '2201:22'
+    hostname: chal_1
