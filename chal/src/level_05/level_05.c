@@ -30,7 +30,7 @@ int main(int argc, char **argv) {
     return 1;
   }
 
-  FILE *file = fopen("/home/pirat/level_5/flag", "r");
+  FILE *file = fopen("/home/pirat/level_05/flag", "r");
 
   if (file) {
     char c;

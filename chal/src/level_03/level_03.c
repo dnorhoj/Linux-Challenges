@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
 
   puts("Godt lavet, her er et flag:");
 
-  FILE *file = fopen("/home/pirat/level_3/flag", "r");
+  FILE *file = fopen("/home/pirat/level_03/flag", "r");
 
   if (file) {
     char c;

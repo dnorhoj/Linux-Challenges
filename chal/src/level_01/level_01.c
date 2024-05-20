@@ -4,7 +4,7 @@
 int main(int argc, char **argv) {
   puts("Nice, du har kørt mit program!\nHer er dit flag:");
 
-  FILE *file = fopen("/home/pirat/level_1/flag", "r");
+  FILE *file = fopen("/home/pirat/level_01/flag", "r");
 
   if (file) {
     char c;

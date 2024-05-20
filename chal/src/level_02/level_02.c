@@ -26,7 +26,7 @@ int main(int argc, char **argv) {
 
   puts("Det er helt rigtigt! Her er et flag til dig:");
 
-  FILE *file = fopen("/home/pirat/level_2/flag", "r");
+  FILE *file = fopen("/home/pirat/level_02/flag", "r");
 
   if (file) {
     char c;

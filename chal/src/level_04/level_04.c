@@ -18,7 +18,7 @@ int main(int argc, char **argv) {
 
   puts("Det var den rigtige kode!");
 
-  FILE *file = fopen("/home/pirat/level_4/flag", "r");
+  FILE *file = fopen("/home/pirat/level_04/flag", "r");
 
   if (file) {
     char c;

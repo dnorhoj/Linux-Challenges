@@ -7,7 +7,7 @@ WORKDIR /app
 
 COPY chal /app
 
-RUN make
+RUN make clean && make
 
 FROM ubuntu:22.04
 

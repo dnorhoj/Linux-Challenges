@@ -8,4 +8,4 @@ Man kan tilgå en manual side ved at bruge kommandoen 'man'.
 
 For eksempel kan man se hvordan man bruger 'cat' ved at bruge 'cat man'.
 
-Du skal læse manual siden for level_4.
+Du skal læse manual siden for level_04.

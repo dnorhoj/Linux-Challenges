@@ -1,6 +1,7 @@
 #include <ctype.h>
 #include <dirent.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
 #include <unistd.h>
@@ -20,8 +21,7 @@ char *find_connected_pid(const char *target_inode) {
       continue;
     }
 
-
-    char fd_path[256];
+    char fd_path[265];
     snprintf(fd_path, sizeof(fd_path), "/proc/%s/fd", pid_dir->d_name);
     DIR *fd_dir = opendir(fd_path);
     if (fd_dir == NULL) {
@@ -43,11 +43,21 @@ char *find_connected_pid(const char *target_inode) {
       }
 
       // Build path to each file descriptor link
-      char fd_link[256];
-      snprintf(fd_link, sizeof(fd_link), "%s/%s", fd_path, fd_entry->d_name);
+      int fd_link_len =
+          snprintf(NULL, 0, "%s/%s", fd_path, fd_entry->d_name) + 1;
+      char *fd_link = malloc(fd_link_len);
+
+      if (!fd_link) {
+        continue;
+      }
+
+      snprintf(fd_link, fd_link_len, "%s/%s", fd_path, fd_entry->d_name);
       char link_target[256];
       ssize_t link_len =
           readlink(fd_link, link_target, sizeof(link_target) - 1);
+
+      free(fd_link);
+
       if (link_len == -1) {
         continue;
       }
@@ -71,7 +81,7 @@ char *find_connected_pid(const char *target_inode) {
 }
 
 int getflag(char *buf, int bufsize) {
-  FILE *file = fopen("/home/pirat/level_6/flag", "r");
+  FILE *file = fopen("/home/pirat/level_06/flag", "r");
 
   if (!file) {
     return -1;
@@ -126,7 +136,9 @@ int main(int argc, char **argv) {
   cmd[len] = 0x00;
 
   if (strcmp("rev", cmd) != 0) {
-    fprintf(stderr, "Du har pipet outputtet ind i '%s', du skal bruge 'rev' istedet.\n", cmd);
+    fprintf(stderr,
+            "Du har pipet outputtet ind i '%s', du skal bruge 'rev' istedet.\n",
+            cmd);
     return 1;
   }
 
