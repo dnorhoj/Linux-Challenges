@@ -15,8 +15,8 @@ setup_levels() {
 
         find $i -type d -exec chmod 0755 {} +
         find $i -type f -exec chmod 0644 {} +
-        chmod 0640 $i/flag
-        chmod 4755 $i/level_*
+        find $i -type f -name flag -exec chmod 0640 {} +
+        find $i -type f -name level_* -exec chmod 4755 {} +
     done
 }
 
