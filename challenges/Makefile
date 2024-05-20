@@ -32,7 +32,7 @@ $(DIST_DIR)/%: $(SRC_DIR)/%.c | $(DIST_DIR)
 
 $(DIST_DIR)/%: $(SRC_DIR)/% | $(DIST_DIR)
 	mkdir -p $(dir $@)
-	cp $< $@
+	cp -r $< $@
 
 # Clean target to remove executables
 clean:

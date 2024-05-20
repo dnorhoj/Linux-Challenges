@@ -5,7 +5,7 @@ RUN apt install -y build-essential
 
 WORKDIR /app
 
-COPY chal /app
+COPY challenges /app
 
 RUN make clean && make
 
@@ -41,7 +41,7 @@ COPY ./config/motd /etc/motd
 COPY --from=build /app/dist /home/pirat/
 
 # Run setup.sh
-COPY ./setup /tmp/
+COPY ./config/setup.sh /tmp/
 RUN /tmp/setup.sh
 RUN rm -rf /tmp/setup.sh
 
