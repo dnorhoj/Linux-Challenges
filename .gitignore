@@ -1,2 +1,4 @@
 /challenges/dist/
+/challenges/build/
 .vscode/
+.env

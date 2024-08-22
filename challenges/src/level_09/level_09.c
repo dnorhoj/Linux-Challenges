@@ -9,7 +9,7 @@ const char charset[] = "abcdefghijklmnopqrstuvwxyz_";
 int main(int argc, char **argv) {
   srandom(1337);
 
-  FILE *file = fopen("/home/pirat/level_09/flag", "r");
+  FILE *file = fopen("/home/${LINUX_USERNAME}/level_09/flag", "r");
   if ((!file) || (!fgets(flagbuf, sizeof(flagbuf), file))) {
     fprintf(stderr, "Kunne ikke læse flaget.\n");
     return 1;

@@ -1,7 +1,6 @@
 services:
   instance_1:
-    build:
-      context: .
-    hostname: codingpirates_1
+    hostname: challenge_1
+    image: linux-challenge
     ports:
     - '2201:22'

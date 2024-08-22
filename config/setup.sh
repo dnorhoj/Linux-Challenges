@@ -1,10 +1,10 @@
 #!/bin/bash
-
 # Should run before the user gets access to the environment, but after the files are copied
+
 cd $(dirname $(readlink -f "$0"))
 
 setup_levels() {
-    LEVELS=$(find /home/pirat -maxdepth 1 -type d -name level_*)
+    LEVELS=$(find /home/${LINUX_USERNAME} -maxdepth 1 -type d -name level_*)
 
     for i in $LEVELS
     do

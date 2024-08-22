@@ -1,14 +1,10 @@
 ------------------------------------------------
 
-Velkommen til!
+Welcome!
 
-Du er nu forbundet til en anden linux maskine.
+You are now connected to a linux machine.
 
-På denne maskine kan du finde nogen forskellige
-opgaver du kan lave. Start med at tjekke hvilke
-opgaver der er ved at køre 'ls'.
-
-Inde i hver opgave mappe er der en fil (README.md)
-som forklarer hvad du skal gøre for at løse opgaven.
+This machine will reset as soon as you quit.
+Run 'ls' to see the available challenges
 
 ------------------------------------------------

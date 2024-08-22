@@ -6,12 +6,12 @@ En absolut sti starter med / og går hele vejen fra roden op til filen.
 
 Her er nogen eksempler på relative stier:
 
-- home/pirat/file
+- home/user/file
 - ./file
 - ../file
 
 Her er nogen eksempler på absolutte stier:
 
-- /home/pirat/file
+- /home/user/file
 - /etc/passwd
-- /home/pirat
+- /home/user

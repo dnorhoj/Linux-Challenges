@@ -28,8 +28,8 @@ int main(int argc, char **argv) {
     return 1;
   }
 
-  if (strcmp(stdin_filename, "coding") != 0) {
-    fprintf(stderr, "Hov, din fil hedder '%s', og ikke 'coding'!\n",
+  if (strcmp(stdin_filename, "hello") != 0) {
+    fprintf(stderr, "Hov, din fil hedder '%s', og ikke 'hello'!\n",
             stdin_filename);
     return 1;
   }
@@ -39,16 +39,16 @@ int main(int argc, char **argv) {
   size_t len = fread(contents_buf, 1, sizeof(contents_buf) - 1, stdin);
   contents_buf[len] = 0x00;
 
-  if (strncmp(contents_buf, "pirates", sizeof("pirates") - 1) != 0 ||
-      (contents_buf[sizeof("pirates") - 1] != 0x00 &&
-       contents_buf[sizeof("pirates") - 1] != 0x0a)) {
-    fprintf(stderr, "Der står ikke 'pirates' i filen.\n");
+  if (strncmp(contents_buf, "world", sizeof("world") - 1) != 0 ||
+      (contents_buf[sizeof("world") - 1] != 0x00 &&
+       contents_buf[sizeof("world") - 1] != 0x0a)) {
+    fprintf(stderr, "Der står ikke 'world' i filen.\n");
     return 1;
   }
 
   puts("Let's gooo. Her er flaget:");
 
-  FILE *file = fopen("/home/pirat/level_07/flag", "r");
+  FILE *file = fopen("/home/${LINUX_USERNAME}/level_07/flag", "r");
 
   if (file) {
     char c;

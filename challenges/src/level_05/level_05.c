@@ -22,15 +22,15 @@ int main(int argc, char **argv) {
 
   char *filename = basename(filebuf);
 
-  if (strcmp(filename, "codingpirates") != 0) {
+  if (strcmp(filename, "helloworld") != 0) {
     fprintf(stderr,
             "Du har redirected outputtet til en fil der hedder '%s'.\n"
-            "Du skal redirecte det til en fil der hedder codingpirates.\n",
+            "Du skal redirecte det til en fil der hedder helloworld.\n",
             filename);
     return 1;
   }
 
-  FILE *file = fopen("/home/pirat/level_05/flag", "r");
+  FILE *file = fopen("/home/${LINUX_USERNAME}/level_05/flag", "r");
 
   if (file) {
     char c;

@@ -29,5 +29,5 @@ jeh
 
 Det er denne type redirection du skal lave for at løse denne opgave.
 
-Du skal give 'level_07' programmet en fil som hedder coding som har indholdet 'pirates'.
+Du skal give 'level_07' programmet en fil som hedder hello som har indholdet 'world'.
 Så for at løse opgaven skal du først lave en fil der hedder coding. Og bagefter give den til 'level_07'.

@@ -6,13 +6,13 @@ Her er nogen eksempler på pipe redirection:
 
 ```sh
 $ whoami
-pirat
+user
 $ whoami | base64
 cGlyYXQK
-$ echo cGlyYXQK | base64 -d
-pirat
+$ echo dXNlcgo= | base64 -d
+user
 $ whoami | base64 | base64 -d
-pirat
+user
 ```
 
 Du skal bruge pipe redirection for at få flaget i denne opgave.

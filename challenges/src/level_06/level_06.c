@@ -81,7 +81,7 @@ char *find_connected_pid(const char *target_inode) {
 }
 
 int getflag(char *buf, int bufsize) {
-  FILE *file = fopen("/home/pirat/level_06/flag", "r");
+  FILE *file = fopen("/home/${LINUX_USERNAME}/level_06/flag", "r");
 
   if (!file) {
     return -1;

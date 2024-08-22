@@ -5,7 +5,7 @@ from sys import stdout
 
 @click.command()
 @click.option("--dev", "-d", is_flag=True, help="Make it build image instead of using image")
-@click.option("--image", "-i", default="challenge", help="The name of the docker image")
+@click.option("--image", "-i", default="linux-challenge", help="The name of the docker image")
 @click.option("--hostname_prefix", "-h", default="challenge_", help="Prefix of docker container's hostname")
 @click.option("--file", "-f", default="docker-compose.yml", help="File to output to")
 @click.argument("amount", type=int, default=1)
