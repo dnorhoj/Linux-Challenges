@@ -11,7 +11,8 @@ WIP: Better readme coming
 
 ## TODOs
 
+- [ ] Use environment variables in controller
+- [ ] Reintroduce MOTD, after removing SSH from challenge instances
 - [ ] Better readme
 - [ ] Configurable challenge via yml/similar
 - [ ] More configurability in general
-- [ ] Dynamic instance spawning

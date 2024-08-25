@@ -1,0 +1,14 @@
+Include /etc/ssh/sshd_config.d/*.conf
+
+AuthorizedKeysFile	.ssh/authorized_keys
+
+AllowAgentForwarding no
+AllowTcpForwarding no
+GatewayPorts no
+X11Forwarding no
+PermitUserEnvironment no
+PermitTunnel no
+
+# Set user only able to use init script
+Match User user
+    ForceCommand /usr/bin/init
