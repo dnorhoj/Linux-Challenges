@@ -14,4 +14,5 @@ set +a
 docker build . \
     -t ${DOCKER_IMAGE_NAME}-controller \
     --build-arg LINUX_USERNAME=${LINUX_USERNAME} \
-    --build-arg LINUX_PASSWORD=${LINUX_PASSWORD}
+    --build-arg LINUX_PASSWORD=${LINUX_PASSWORD} \
+    --build-arg DOCKER_IMAGE_NAME=${DOCKER_IMAGE_NAME}

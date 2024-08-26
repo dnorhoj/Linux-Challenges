@@ -1,10 +1,12 @@
 services:
   controller:
-    build:
-      context: .
-      args:
-        LINUX_USERNAME: $LINUX_USERNAME
-        LINUX_PASSWORD: $LINUX_PASSWORD
+#    build:
+#      context: .
+#      args:
+#        LINUX_USERNAME: $LINUX_USERNAME
+#        LINUX_PASSWORD: $LINUX_PASSWORD
+#        DOCKER_IMAGE_NAME: $DOCKER_IMAGE_NAME
+    image: linux-challenge-controller
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:

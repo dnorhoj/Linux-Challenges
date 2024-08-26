@@ -8,7 +8,8 @@ RUN apt install -y build-essential gettext-base
 
 WORKDIR /app
 
-COPY challenges /app
+COPY Makefile /app
+COPY src /app/src
 
 RUN make clean && LINUX_USERNAME=$LINUX_USERNAME make
 
@@ -33,11 +34,6 @@ RUN useradd -m -s /bin/bash $LINUX_USERNAME
 RUN echo "${LINUX_USERNAME}:${LINUX_PASSWORD}" | chpasswd
 
 WORKDIR /home/${LINUX_USERNAME}/
-
-# motd
-RUN rm -rf /etc/update-motd.d
-RUN rm -rf /etc/legal
-COPY ./config/motd /etc/motd
 
 # Copy challenge
 COPY --from=build /app/dist .

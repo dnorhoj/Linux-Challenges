@@ -4,7 +4,7 @@
 cd $(dirname $(readlink -f "$0"))
 
 setup_levels() {
-    LEVELS=$(find /home/${LINUX_USERNAME} -maxdepth 1 -type d -name level_*)
+    LEVELS=$(find /home/${LINUX_USERNAME} -maxdepth 1 -type d)
 
     for i in $LEVELS
     do
@@ -14,9 +14,9 @@ setup_levels() {
         fi
 
         find $i -type d -exec chmod 0755 {} +
-        find $i -type f -exec chmod 0644 {} +
+        find $i -type f -not -executable -exec chmod 0644 {} +
         find $i -type f -name flag -exec chmod 0640 {} +
-        find $i -type f -name level_* -exec chmod 4755 {} +
+        find $i -type f -executable -exec chmod 4755 {} +
     done
 }
 
