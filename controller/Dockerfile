@@ -25,6 +25,7 @@ RUN DOCKER_IMAGE_NAME=$DOCKER_IMAGE_NAME envsubst '$DOCKER_IMAGE_NAME' < /usr/bi
 
 # SSH
 COPY config/sshd_config /etc/ssh/sshd_config
+RUN LINUX_USERNAME=$LINUX_USERNAME envsubst '$LINUX_USERNAME' < /etc/ssh/sshd_config | sponge /etc/ssh/sshd_config
 
 # MOTD
 COPY config/motd /etc/motd

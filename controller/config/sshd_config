@@ -10,5 +10,5 @@ PermitUserEnvironment no
 PermitTunnel no
 
 # Set user only able to use init script
-Match User user
+Match User $LINUX_USERNAME
     ForceCommand /usr/bin/init
