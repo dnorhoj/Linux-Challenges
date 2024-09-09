@@ -11,7 +11,7 @@ set -a
 source ../.env
 set +a
 
-docker build . \
+docker build . --no-cache \
     -t ${DOCKER_IMAGE_NAME}-controller \
     --build-arg LINUX_USERNAME=${LINUX_USERNAME} \
     --build-arg LINUX_PASSWORD=${LINUX_PASSWORD} \

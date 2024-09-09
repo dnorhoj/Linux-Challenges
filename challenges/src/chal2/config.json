@@ -1,0 +1,8 @@
+{
+    "commands": [
+        "useradd -s /bin/bash -m chal2",
+        "echo \"chal2:L8r8Nfq9Co1KAQWW50iTLp6z\" | chpasswd",
+        "rm config.json",
+        "cd ..; mv chal2 ~chal2/challenge"
+    ]
+}

@@ -11,7 +11,7 @@ WORKDIR /app
 COPY Makefile /app
 COPY src /app/src
 
-RUN make clean && LINUX_USERNAME=$LINUX_USERNAME make
+RUN make clean && LINUX_USERNAME=extra_challenges make
 
 FROM ubuntu:22.04
 

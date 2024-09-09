@@ -1,0 +1,6 @@
+{
+    "commands": [
+        "rm config.json",
+        "cd ..; mv level_11 ~extra_challenges/godmode"
+    ]
+}

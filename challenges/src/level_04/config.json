@@ -1,0 +1,6 @@
+{
+    "commands": [
+        "rm config.json",
+        "cd ..; mv level_04 ~extra_challenges"
+    ]
+}

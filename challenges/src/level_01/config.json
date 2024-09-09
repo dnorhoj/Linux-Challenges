@@ -1,0 +1,8 @@
+{
+    "commands": [
+        "useradd -s /bin/bash -m extra_challenges",
+        "echo \"extra_challenges:AvBgzNMkNTrLiCp6Ydpxnw\" | chpasswd",
+        "rm config.json",
+        "cd ..; mv level_01 ~extra_challenges"
+    ]
+}
