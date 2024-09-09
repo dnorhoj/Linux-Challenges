@@ -9,5 +9,9 @@ services:
     image: linux-challenge-controller
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - ssh_data:/etc/ssh
     ports:
       - 2222:22
+
+volumes:
+  ssh_data:
