@@ -26,7 +26,8 @@ RUN apt install -y \
     vim \
     strace \
     man \
-    man-db
+    man-db \
+    jq
 
 RUN yes | unminimize
 
