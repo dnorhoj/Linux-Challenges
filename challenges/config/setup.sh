@@ -4,7 +4,7 @@
 cd $(dirname $(readlink -f "$0"))
 
 setup_levels() {
-    level_directories=$(find "/home/${LINUX_USERNAME}" -maxdepth 1 -type d)
+    level_directories=$(find "/home/${LINUX_USERNAME}" -maxdepth 1 -type d | sort)
 
     for level_dir in $level_directories
     do

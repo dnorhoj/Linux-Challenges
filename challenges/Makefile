@@ -9,7 +9,7 @@ BUILD_DIR = ./build
 DIST_DIR = ./dist
 
 # Create a list of source files
-ALL_FILES = $(wildcard $(SRC_DIR)/*/*)
+ALL_FILES = $(wildcard $(SRC_DIR)/*/*) $(wildcard $(SRC_DIR)/*/.*)
 
 SOURCES = $(wildcard $(SRC_DIR)/*/*.c)
 INTERMEDIATES = $(patsubst $(SRC_DIR)/%.c, $(BUILD_DIR)/%.c, $(SOURCES))
