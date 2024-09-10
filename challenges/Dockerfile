@@ -27,7 +27,10 @@ RUN apt install -y \
     strace \
     man \
     man-db \
-    jq
+    jq \
+    less \
+    strace \
+    ltrace
 
 RUN yes | unminimize
 
